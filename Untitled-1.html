@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agregar paciente</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <h1>Agregar pacientes</h1>
@@ -12,128 +12,112 @@
     <fieldset>
         <legend>Datos personales</legend>
         <div>
+         <label>
+                Nombres</br>
+                <input type="text" id="nombre" name="nombre" class="ed-48" required/>
+            </label>
+      
+        <label>
+                Apellidos</br>
+                <input type="text" id="apellido" name="apellido"  class="ed-48" required>
+            </label>
+
             <label>
-                Nombres
-                <input type="text" required>
+                E-mail</br>
+                <input type="email" id="e-mail" name="e-mail" class="ed-48"required>
+            </label>
+      
+            <label>
+                Dirección</br>
+                <input type="text" id="direccion" name="direccion"  class="ed-48" required>
+            </label>
+      
+            <label>
+                Localidad</br>
+                <input type="text"  id="localidad" name="localidad"  class="ed-30"required>
 
             </label>
 
-
-        </div>
-        <div>
             <label>
-                Apellidos
-                <input type="text" required>
+                Departamento</br>
+                <input type="text" id="departamento" name="departamento" class="ed-30"required>
             </label>
-
-        </div>
-        <div>
+     
             <label>
-                E-mail
-                <input type="email"required>
+                País</br>
+                <input type="text" id="pais" name="pais" class="ed-30"required>
             </label>
-        </div>
-        <div>
+     
             <label>
-                Dirección
-                <input type="text"required>
+                C.I.</br>
+                <input type="text" id="ci" name="ci"class="ed-35"required>
             </label>
-        </div>
-        <div>
-            <label>
-                Localidad
-                <input type="text" required>
-
-            </label>
-
-        </div>
-        <div>
-            <label>
-                Departamento
-                <input type="text"required>
-            </label>
-        </div>
-        <div>
-            <label>
-                País
-                <input type="text"required>
-            </label>
-        </div>
-        <div>
-            <label>
-                C.I. 
-                <input type="text"required>
-            </label>
-        </div>
-        <div>
+       
                 <label>
-                    Teléfono 1 
-                    <input type="text"required>
+                    Teléfono 1</br>
+                    <input type="text" id="telefono1" name="telefono1" class="ed-35"required>
                 </label>
-            </div>
-            <div>
+           
                     <label>
-                        Teléfono 2
-                        <input type="text">
+                        Teléfono 2</br>
+                        <input type="text" id="telefono2" name="telefono2"class="ed-35">
                     </label>
-                </div>
-                <div>
-                        <label>
-                            Teléfono 3
-                            <input type="text">
+                 <label>
+                            Teléfono 3</br>
+                        <input type="text" id="telefono3" name="telefono3" class="ed-35"   >
                         </label>
-                    </div>
-                    <div>
-                            <label>
-                                Fecha de nacimiento 
-                                <input type="date"required>
-                            </label>
-                        </div>
-                        <div>
-                        <legend>Sexo</legend>
-                        <label><input type="radio" name="gender"> Hombre</label>
-                        <label><input type="radio" name="gender"> Mujer</label>
-                        <label><input type="radio" name="gender"> Otro</label>
-                    </div>
-                </form>
-                        
-                        
-                        
-                    
-                
-            
-
-
-
-    </fieldset>
-    <form>
-        <fieldset>
-            <form>
-            <legend>Datos Clinicos</legend>
-
-
-        
-        <div>
-                <label>
-                    Médico Tratante
-                    <input type="text">
-    
-                </label>
-    
-    
-            </div>
-            <div>
-                    <label>
-                        Enfermero Responsable
-                        <input type="text">
-        
+                        <label>sexo</br>
+                       <select id="sexo" name="sexo" class="input-30">
+                                <option value="hombre">Hombre</option>
+                                <option value="mujer">Mujer</option>
+                                <option value="otros">Otros</option>
+                       </select>
                     </label>
-        
-        
+                    
+                            <label>
+                                Fecha de nacimiento</br>
+                        <input type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento"required>
+                            </label>
+                      
+                        <label>Obsevaciones</br>
+                        <textarea name="obsevaciones" rows="7"></textarea>
+                    </label>
+
+                    
+                    </div>
+    </fieldset>
+    
+        <fieldset>
+            
+               
+            <legend>Datos Clinicos</legend>
+        <div>
+                <label>Médico Tratante</br>
+    
+                    
+                    <select id="doctores_id" name="doctores_id">
+                            <option value="doctores_id">Marcelo Díaz</option>
+                            <option value="doctores_id">Rosario Sosa</option>
+                            <option value="doctores_id">Carmen Rodríguez</option>
+                            <option value="doctores_id">José Pesolano</option>
+                    </select>
+                </label>
                 </div>
                 <div>
-                        <label for="country">Mutualista</label>
-                        <select name="country" id="country">
+                    <label>Enfermero responsable</br>
+                    <select id="enfermero_id" name="enfermero_id">
+                            <option value="enfermeros_id">Vanesa Pedraja</option>
+                            <option value="enfermeros_id">Carlos Gonzalez</option>
+                            <option value="enfermeros_id">Gustavo Araujo</option>
+                            <option value="enfermeros_id">María Veiga</option>
+                </select>
+            </label>
+                               
+                </div>
+
+                <div>
+                        <label>Mutualista</br>
+                        <select name="mutualista" id="mutualista">
                             <option value="ASSE">ASSE</option>
                             <option value="Comero">Comero</option>
                             <option value="Medica Uruguaya">Medica Uruguaya</option>
@@ -141,82 +125,72 @@
 
 
                         </select>
+                    </label>
                             
                            
             
                     </div>
                     <div>
-                            <label for="country">Tipo de Paciente</label>
-                            <select name="country" id="country">
+                            <label >Tipo de Paciente</br>
+                            <select name="pacientes_id" id="pacientess_id">
                                 <option value="Agudo">Agudo</option>
                                 <option value="Ambulatorio">Ambulatorio</option>
                                 <option value="Estable">Estable </option>
                                 <option value="Transitorio">Transitorio </option>
                                 <option value="Transplantado">Transplantado </option>
                                 <option value="Obito">Obito </option>
-
-
-    
-    
-    
-                            </select>
+                             </select>
+                            </label>
                                 
                                
                 
                         </div>
-                    <div>
                         <label>
                            Número FNR
-                            <input type="text">
+                            <input type="text" id="numero frn" name="numero frn">
             
                         </label>
-            
-            
-                    </div>
-                    <div>
-                        <label> <input type="checkbox">Paciente vigente </label>
-                    </div>
-                    <div>
+                        <label>Paciente vigente <input type="checkbox"></label>
                         <label>
                             Primer diálisis
-                            <input type="date">
+                            <input type="date" id="primer dialiis" name="primer dialiis">
 
                         </label>
-            
-            
-                    </div>
-                    <div>
-                        <fieldset>
-                        <legend>Grupo sanguineo</legend>
-                        <fieldset>
                     
-                        <legend>Tipo</legend>
-
+                        <fieldset>
+                            <div>
+                        <label>Grupo sanguineo</label>
+                                        <label>Tipo</label>
+                                        <select id="tipo" name="tipo">
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="AB">AB</option>
+                                                <option value="O">O</option>
+                                    </select>
+                                                   
+                                    </div>
+                    
                         
-                        <label><input type="radio" name="gender">A</label>
-                        <label><input type="radio" name="gender">B</label>
-                        <label><input type="radio" name="gender">AB</label>
-                        <label><input type="radio" name="gender">O</label>
-                    </fieldset>
+    </fieldset>
                     <fieldset>
-                       
-                    
-                    
-                            
-                            <legend>Rh</legend>
-
-                            <label><input type="radio" name="Rh">+</label>
-                            <label><input type="radio" name="Rh">-</label>
+                        <div>
+                                <label>Rh</label>
+                                <select id="tipo" name="tipo">
+                                        <option value="+">+</option>
+                                        <option value="-">-</option>
+                                        
+                            </select>
+                        </div>
                     </fieldset>
 
-                    </div>
+                    
                 
                 <div>
 
                 </div>
                 <label>
                         Altura (m)
-                        <input type="text">
+                        <input type="text" id="altura (m)" name="altura (m)">
         
                     </label>
         
@@ -230,35 +204,23 @@
 
                 </div>
                 <div>
-                        <label for="country">Tipo de Puesto</label>
+                        <label for="country">Tipo de Puesto</br>
                         <select name="country" id="country">
                             <option value="Normal">Normal</option>
                             <option value="HVC+">HVC+</option>
-                           
-
-
-
-                        </select>
-                            
-                           
+                           </select>
+                    </label>
+             </div>
+            </fieldset></br>
             
-                    
-                </div>
-            </fieldset>
+            <button class="btn btn-large" type="submit">Guardar</button>
+            <button class="btn" type="submit">Cancelar</button>
+       
     
-    <button>Guardar</button>
-    <button>Cancelar</button>
+
 
 
             </form>
-                </form>
                 </body>
 </html>
 
-
-               
-
-
-
-
- 
